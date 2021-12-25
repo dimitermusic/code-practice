@@ -4,7 +4,6 @@
 This is a special repository where I sharpen my JavaScript skills.
 
 ## Table of Contents
-- [JavaScript Practice ![License](https://opensource.org/licenses/Apache-2.0)](#javascript-practice-)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
@@ -32,5 +31,6 @@ No testing available.
 ## Questions
 If you have any questions, please visit my Github profile or email me using the links below
 
-[Github](https://github.com/dimitermusic)
+[Github](https://github.com/dimitermusic)   
+
 [Email](mailto:dimitermusic@gmail.com)

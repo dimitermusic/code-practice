@@ -11,7 +11,7 @@ function multiply(a, b) {
 }
 
 // Confirming that multiplication function is working correctly
-console.log(multiply(2, 4));
+console.log(`Testing multiplication function: ` + multiply(2, 4));
 
 // preventDefault to prevent page from refreshing when button is clicked
 // Taking in user input from html page, plugging that into our multiplication function, and dynamically rendering the answer to the page.
@@ -20,13 +20,14 @@ function handleAnswerDisplay(e) {
     const numEl1 = document.querySelector("#numEl1").value;
     const numEl2 = document.querySelector("#numEl2").value;
     console.log(multiply(numEl1, numEl2));
-    ansEl.textContent = `${multiply(numEl1, numEl2)}`;
+    ansEl.textContent = `= ${multiply(numEl1, numEl2)}`;
 }
 
 // Method that runs our dynamic rendering function when button is clicked.
 multiplyBtn.addEventListener("click", handleAnswerDisplay);
 
 // Fizzbuzz challenge solution from scratch with no help!
+console.log("My fizzbuzz solution");
 for (let i = 1; i < 100; i++) {
     if (i % 15 === 0) {
         console.log("fizzbuzz");

@@ -4,6 +4,7 @@ console.log("Hello!");
 // Selecting HTML elements to dynamically render content
 const ansEl = document.querySelector("#answer");
 const multiplyBtn = document.querySelector("#multiplyBtn");
+const fizzBuzzUl = document.querySelector("#fizzbuzz")
 
 // Function that multiplies two arguments or paramaters
 function multiply(a, b) {
@@ -31,12 +32,24 @@ console.log("My fizzbuzz solution");
 for (let i = 1; i < 100; i++) {
     if (i % 15 === 0) {
         console.log("fizzbuzz");
+        const fizzbuzzEl = document.createElement("li")
+        fizzbuzzEl.textContent = "fizzbuzz"
+        fizzBuzzUl.append(fizzbuzzEl)
     } else if (i % 5 === 0) {
         console.log("buzz");
+        const buzzEl = document.createElement("li")
+        buzzEl.textContent = "buzz"
+        fizzBuzzUl.append(buzzEl)
     } else if (i % 3 === 0) {
         console.log("fizz");
+        const fizzEl = document.createElement("li")
+        fizzEl.textContent = "fizz"
+        fizzBuzzUl.append(fizzEl)
     } else {
         console.log(i);
+        const numEl = document.createElement("li")
+        numEl.textContent = i
+        fizzBuzzUl.append(numEl)
     }
 }
 

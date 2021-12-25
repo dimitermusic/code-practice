@@ -17,7 +17,7 @@ This is a special repository where I sharpen my JavaScript skills.
 No installation required.
 
 ## Usage
-Not deployed at this time.
+Visit the deployed site [here](https://dimitermusic.github.io/jsPractice.html/)
 
 ## Contributing
 Feedback and contributions are always welcome!

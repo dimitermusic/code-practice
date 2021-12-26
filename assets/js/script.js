@@ -12,7 +12,7 @@ function multiply(a, b) {
 }
 
 // Confirming that multiplication function is working correctly
-console.log(`Testing multiplication function: ` + multiply(2, 4));
+console.log(`Testing multiplication function (expected outcome is 8): ` + multiply(2, 4));
 
 // preventDefault to prevent page from refreshing when button is clicked
 // Taking in user input from html page, plugging that into our multiplication function, and dynamically rendering the answer to the page.
@@ -28,23 +28,27 @@ function handleAnswerDisplay(e) {
 multiplyBtn.addEventListener("click", handleAnswerDisplay);
 
 // Fizzbuzz challenge solution from scratch with no help!
-console.log("My fizzbuzz solution");
-for (let i = 1; i < 100; i++) {
+// Dynamic rendering and styling
+console.log("Testing my fizzbuzz solution:");
+for (let i = 1; i < 16; i++) {
     if (i % 15 === 0) {
         console.log("fizzbuzz");
         const fizzbuzzEl = document.createElement("li")
         fizzbuzzEl.textContent = "fizzbuzz"
         fizzBuzzUl.append(fizzbuzzEl)
+        fizzbuzzEl.setAttribute("style", "color:red; font-weight:bold")
     } else if (i % 5 === 0) {
         console.log("buzz");
         const buzzEl = document.createElement("li")
         buzzEl.textContent = "buzz"
         fizzBuzzUl.append(buzzEl)
+        buzzEl.setAttribute("style", "color:blue; font-weight:bold")
     } else if (i % 3 === 0) {
         console.log("fizz");
         const fizzEl = document.createElement("li")
         fizzEl.textContent = "fizz"
         fizzBuzzUl.append(fizzEl)
+        fizzEl.setAttribute("style", "color:green; font-weight:bold")
     } else {
         console.log(i);
         const numEl = document.createElement("li")

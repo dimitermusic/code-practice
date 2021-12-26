@@ -23,6 +23,6 @@ This application is covered under the Apache 2.0 License
 ## Questions
 If you have any questions, please visit my Github profile or email me using the links below
 
-[Github.com/dimitermusic](https://github.com/dimitermusic)   
+[github.com/dimitermusic](https://github.com/dimitermusic)   
 
 [dimitermusic@gmail.com](mailto:dimitermusic@gmail.com)

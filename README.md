@@ -1,4 +1,4 @@
-# JavaScript Practice [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Code Practice [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
 This is a special repository where I sharpen my JavaScript, CSS, Bootstrap, and general coding skills.

@@ -49,3 +49,8 @@ footer {
 a {
     text-decoration: none;
 }
+
+#primeInput {
+    width: 100px;
+    height: 50px;
+}

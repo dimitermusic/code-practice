@@ -60,31 +60,31 @@ for (let i = 1; i < 16; i++) {
     }
 }
 
-console.log("code still running");
-
 function handlePrimeCheck(n) {
     if (n <= 1) {
         return false
     } else if (n == 2) {
         return true
-    }
-    else {
+    } else {
         for (let i = 2; i < n; i++) {
-            if (n % i === 0) {
+            if (n % i == 0) {
                 return false
             }
-            return true
         }
     }
+    return true
 }
 
 // Testing if prime number check function is accurate
 console.log("Testing if prime number check function is accurate:");
-console.log(handlePrimeCheck(-1));
-console.log(handlePrimeCheck(1));
-console.log(handlePrimeCheck(2));
-console.log(handlePrimeCheck(8));
-console.log(handlePrimeCheck(13));
+console.log(`Expected to be false: ` + handlePrimeCheck(-1));
+console.log(`Expected to be false: ` + handlePrimeCheck(1));
+console.log(`Expected to be true: ` + handlePrimeCheck(2));
+console.log(`Expected to be true: ` + handlePrimeCheck(7));
+console.log(`Expected to be false: ` + handlePrimeCheck(8));
+console.log(`Expected to be true: ` + handlePrimeCheck(13));
+console.log(`Expected to be false: ` + handlePrimeCheck(21));
+console.log(`Expected to be false: ` + handlePrimeCheck(55));
 
 // Displaying prime number results based on user input
 function handlePrimeDisplay(e) {
@@ -98,8 +98,6 @@ function handlePrimeDisplay(e) {
         primeAnswer.textContent = "True";
     }
 }
-
-console.log("code still running");
 
 // Method that runs our dynamic rendering function when button is clicked.
 primeBtn.addEventListener("click", handlePrimeDisplay);

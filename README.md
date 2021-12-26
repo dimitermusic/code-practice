@@ -17,7 +17,7 @@ This is a special repository where I sharpen my JavaScript, CSS, Bootstrap, and 
 No installation required.
 
 ## Usage
-Visit the deployed site [here](https://dimitermusic.github.io/jsPractice.html/)
+Visit the deployed site [here](https://dimitermusic.github.io/code-practice.html/)
 
 ## Contributing
 Feedback and contributions are always welcome!

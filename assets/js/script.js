@@ -60,6 +60,8 @@ for (let i = 1; i < 16; i++) {
     }
 }
 
+console.log("code still running");
+
 function handlePrimeCheck(n) {
     if (n <= 1) {
         return false
@@ -96,6 +98,8 @@ function handlePrimeDisplay(e) {
         primeAnswer.textContent = "True";
     }
 }
+
+console.log("code still running");
 
 // Method that runs our dynamic rendering function when button is clicked.
 primeBtn.addEventListener("click", handlePrimeDisplay);

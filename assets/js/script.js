@@ -61,8 +61,10 @@ for (let i = 1; i < 16; i++) {
     }
 }
 
+// Testing to confirm array is empty
 console.log(primeArr);
 
+// We will use this function to check if a number from user input is prime later and be able to display its factors
 function handleFactors(num) {
     primeArr = []
     for (let i = 2; i < num; i++) {
@@ -74,9 +76,11 @@ function handleFactors(num) {
     }
 }
 
+// Testing the handleFactors function
 handleFactors(21);
 console.log(primeArr);
 
+// Checks if number from user input is prime. I came up with this solution from scratch with no google help!
 function handlePrimeCheck(n) {
     handleFactors(n);
     if (n <= 1) {
@@ -99,7 +103,7 @@ console.log(`Expected to be true: ` + handlePrimeCheck(13));
 console.log(`Expected to be false: ` + handlePrimeCheck(21));
 console.log(`Expected to be false: ` + handlePrimeCheck(55));
 
-// Displaying prime number results based on user input
+// Displaying prime number results based on user input as well as its factors if any
 function handlePrimeDisplay(e) {
     e.preventDefault();
     const primeInput = document.querySelector("#primeInput").value;

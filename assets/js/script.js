@@ -10,7 +10,7 @@ const primeAnswer = document.querySelector("#primeAnswer");
 var primeArr = []
 
 
-// Function that multiplies two arguments or paramaters
+// Function that multiplies two arguments or paramaterss
 function multiply(a, b) {
     return a * b;
 }
@@ -105,7 +105,7 @@ function handlePrimeDisplay(e) {
     const primeInput = document.querySelector("#primeInput").value;
     if (handlePrimeCheck(primeInput) === false) {
         console.log(`Is prime: ` + false);
-        primeAnswer.textContent = `False because it is either a number less than 2 or has multiple factors.
+        primeAnswer.textContent = `False, because it is either a number less than 2 or has multiple factors.
         ${primeArr.length > 0 ? "(" + primeArr + ")" : ""}`;
     } else {
         console.log(`Is prime: ` + true);

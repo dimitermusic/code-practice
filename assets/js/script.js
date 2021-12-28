@@ -7,6 +7,7 @@ const multiplyBtn = document.querySelector("#multiplyBtn");
 const fizzBuzzUl = document.querySelector("#fizzbuzz");
 const primeBtn = document.querySelector("#primeBtn");
 const primeAnswer = document.querySelector("#primeAnswer");
+var primeArr = []
 
 
 // Function that multiplies two arguments or paramaters
@@ -60,19 +61,31 @@ for (let i = 1; i < 16; i++) {
     }
 }
 
+console.log(primeArr);
+
+function handleFactors(num) {
+    primeArr = []
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) {
+            console.log(i);
+            primeArr.push(i)
+            continue
+        }
+    }
+}
+
+handleFactors(21);
+console.log(primeArr);
+
 function handlePrimeCheck(n) {
+    handleFactors(n);
     if (n <= 1) {
         return false
     } else if (n == 2) {
         return true
-    } else {
-        for (let i = 2; i < n; i++) {
-            if (n % i == 0) {
-                return false
-            }
-        }
+    } else if (primeArr.length > 0) {
+        return false
     }
-    return true
 }
 
 // Testing if prime number check function is accurate
@@ -92,10 +105,11 @@ function handlePrimeDisplay(e) {
     const primeInput = document.querySelector("#primeInput").value;
     if (handlePrimeCheck(primeInput) === false) {
         console.log(`Is prime: ` + false);
-        primeAnswer.textContent = "False";
+        primeAnswer.textContent = `False because it is either a number less than 2 or has multiple factors.
+        ${primeArr.length > 0 ? "(" + primeArr + ")" : ""}`;
     } else {
         console.log(`Is prime: ` + true);
-        primeAnswer.textContent = "True";
+        primeAnswer.textContent = "True, because it is a number greater than 1 that only has two factors: 1 and itself!";
     }
 }
 

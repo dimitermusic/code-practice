@@ -28,8 +28,12 @@ const handleAnswerDisplay = (e) => {
     e.preventDefault();
     const numEl1 = document.querySelector("#numEl1").value;
     const numEl2 = document.querySelector("#numEl2").value;
-    console.log(multiply(numEl1, numEl2));
-    ansEl.textContent = `= ${multiply(numEl1, numEl2)}`;
+    if (numEl1 === "" || numEl2 === "") {
+        alert("You must enter two numbers to multiply")
+    } else {
+        console.log(`${numEl1} x ${numEl2} = ${multiply(numEl1, numEl2)}`);
+        ansEl.textContent = `= ${multiply(numEl1, numEl2)}`;
+    }
 }
 
 // Method that runs our dynamic rendering function when button is clicked.
@@ -124,14 +128,15 @@ console.log("======================================");
 const handlePrimeDisplay = (e) => {
     e.preventDefault();
     const primeInput = document.querySelector("#primeInput").value;
-    if (handlePrimeCheck(primeInput) === false) {
+    if (primeInput === "") {
+        alert("You must enter a number")
+    } else if (handlePrimeCheck(primeInput) === false) {
         // Convert array into string with spaces for DOM
         const primeArrStr = primeArr.join(", ")
-        console.log(`Is Prime: False (Factors: ${primeArrStr})`);
-        primeAnswer.textContent = `False, because it is either a number less than 2 or has multiple factors.
-        ${primeArr.length > 0 ? "(" + primeArrStr + ")" : ""}`;
+        console.log(`${primeInput} is not a prime number. ${primeArrStr.length > 0 ? (`Factors: ${primeArrStr}`) : ``}`);
+        primeAnswer.textContent = `False, because it is either a number less than 2 or has multiple factors. ${primeArr.length > 0 ? (`(${primeArrStr})`) : ``}`;
     } else {
-        console.log(`Is Prime: True`);
+        console.log(`${primeInput} is a prime number.`);
         primeAnswer.textContent = "True, because it is a number greater than 1 that only has two factors: 1 and itself!";
     }
 }
